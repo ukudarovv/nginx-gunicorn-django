@@ -23,6 +23,7 @@ django-admin startproject $project_name
 sudo sed -i "s~dbms_template_path~$project_path~g" gunicorn_config.py
 sudo sed -i "s~dbms_template_user~$user_linux~g" gunicorn_config.py
 sudo sed -i "s~dbms_template_workers~$project_workers~g" gunicorn_config.py
+sudo sed -i "s~config~$project_name~g" gunicorn_config.py
 
 sudo sed -i "s~djangowebsite~$project_name~g" gunicorn_config.py
 sudo sed -i "s~8001~$project_port~g" gunicorn_config.py
